@@ -66,6 +66,10 @@ echo "Python library: $PYTHON_LIBRARY"
 # Export necessary environment variables for CMake
 export CMAKE_LIBRARY_PATH="$PYTHON_LIB_DIR:$CMAKE_LIBRARY_PATH"
 
+# export openssl and qt5 path
+export OPENSSL_ROOT_DIR=/opt/homebrew/opt/openssl@3
+export Qt5_DIR=/opt/homebrew/opt/qt@5/lib/cmake
+
 python3.11 -m colcon build --symlink-install --packages-skip-by-dep qt_gui_cpp --packages-skip qt_gui_cpp --cmake-args \
             -DBUILD_TESTING=OFF \
             -DTHIRDPARTY=FORCE \
