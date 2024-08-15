@@ -13,7 +13,7 @@ brew install \
     asio assimp bison bullet cmake console_bridge cppcheck \
     cunit eigen freetype graphviz opencv openssl orocos-kdl pcre poco \
     pyqt5 python qt@5 sip spdlog tinyxml tinyxml2 wget
-brew uninstall --ignore-dependencies python@3.12 qt6
+brew uninstall --ignore-dependencies python@3.12
 
 # install dep at pip
 python3.11 -m pip install -U pip
@@ -39,7 +39,6 @@ vcs import src < ros2.repos
 patch -l < patches/ros2_console_bridge_vendor.patch
 patch -l < patches/ros2_rviz_ogre_vendor.patch
 patch -l < patches/ros_visualization_rqt_bag.patch
-patch -l < patches/ros2_pybind11_vendor.patch
 
 # build ros2_humble_m1
 export CMAKE_PREFIX_PATH=$CMAKE_PREFIX_PATH:$(brew --prefix qt@5)

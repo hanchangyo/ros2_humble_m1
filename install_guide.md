@@ -25,7 +25,7 @@ brew install \
 ```
 
 ```bash
-brew uninstall --ignore-dependencies python@3.12 qt6
+brew uninstall --ignore-dependencies python@3.12
 ```
 
 ```bash
@@ -66,7 +66,6 @@ vcs import src < ros2.repos
 patch -l < patches/ros2_console_bridge_vendor.patch
 patch -l < patches/ros2_rviz_ogre_vendor.patch
 patch -l < patches/ros_visualization_rqt_bag.patch
-patch -l < patches/ros2_pybind11_vendor.patch
 ```
 
 ```bash
@@ -105,7 +104,6 @@ python3.11 -m colcon build --symlink-install --packages-skip-by-dep qt_gui_cpp -
             -DPYTHON_EXECUTABLE="$PYTHON_EXECUTABLE" \
             -DPYTHON_INCLUDE_DIR="$PYTHON_INCLUDE_DIR" \
             -DPYTHON_LIBRARY="$PYTHON_LIBRARY" \
-            "$@" \
             -Wno-dev
 ```
 
