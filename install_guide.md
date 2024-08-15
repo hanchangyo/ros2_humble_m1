@@ -66,6 +66,7 @@ vcs import src < ros2.repos
 patch -l < patches/ros2_console_bridge_vendor.patch
 patch -l < patches/ros2_rviz_ogre_vendor.patch
 patch -l < patches/ros_visualization_rqt_bag.patch
+patch -l < patches/ros2_pybind11_vendor.patch
 ```
 
 ```bash
