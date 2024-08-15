@@ -34,6 +34,7 @@ python3.11 -m pip install -U \
 git clone https://github.com/hanchangyo/ros2_humble_m1
 mkdir ${HOME}/ros2_humble_m1/src
 cd ${HOME}/ros2_humble_m1/
+vcs import src < ros2.repos
 
 patch -l < patches/ros2_console_bridge_vendor.patch
 patch -l < patches/ros2_rviz_ogre_vendor.patch
